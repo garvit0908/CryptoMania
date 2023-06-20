@@ -17,6 +17,7 @@ const App = () => {
           <Layout>
             <div className="routes">
               <Routes>
+                <Route exact path='/homepage' Component={Homepage}/>
                 <Route exact path='/exchanges' Component={Exchanges}/>
                 <Route exact path='/cryptocurrencies' Component={Cryptocurrencies}/>
                 <Route exact path='//crypto/:coinId' Component={CryptoDetails}/>
