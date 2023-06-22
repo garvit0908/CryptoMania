@@ -2,6 +2,7 @@ import React from 'react'
 import {Routes,Route,Link} from 'react-router-dom';
 import {Layout,Typography,Space} from 'antd';
 // import 'antd/dist/antd.css';
+import './App.css'
 
 import {Navbar,Exchanges,Homepage,Cryptocurrencies,CryptoDetails,News} from './components'
 // import Navbar from './components/Navbar'
@@ -52,7 +53,7 @@ const App = () => {
               All Rights Reserved
             </Typography.Title>
             <Space>
-              <Link to="/">Home</Link>
+              {/* <Link to="/">Home</Link> */}
             </Space>
         </div>
     </div>

@@ -5,6 +5,7 @@ import { Card, Row, Col, Input } from 'antd'
 
 import { useGetCryptosQuery } from '../services/CryptoApi'
 // import '/Cryptocurrencies.css'
+import '../App.css'
 
 
 
