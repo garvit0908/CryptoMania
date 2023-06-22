@@ -44,12 +44,30 @@ a:hover{
     background-color: rgb(0, 21, 41);
 }
 
+/* .nav-bar
+{
+    height: 100px;
+    /* position: fixed; */
+    /* left: 0; */
+    /* margin: 10px; */
+    /* height: 100vh; */
+    /* margin: 0px; */
+    /* background-color: rgb(0, 21, 41); 
+
+}  */
+.nav-bar
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .logo-container{
     background-color: #001529;
     display: flex;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
     width: 100%;
+    /* height: ; */
 }
 .logo{
     margin:0 0 0 15px;
@@ -362,7 +380,7 @@ width: 70%;
     min-width: 250px;
 }
 .crypto-card .crypto-image{
-    width:10px;
+    width:30px;
 }
 .select-timeperiod{
     width: 200px !important;
@@ -373,6 +391,7 @@ width: 70%;
     background-color: #001529;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding:1px;
+    height: 50px;
     align-items: center;
 }

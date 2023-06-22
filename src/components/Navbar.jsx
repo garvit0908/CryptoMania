@@ -16,6 +16,8 @@ const Navbar = () => {
             {/* <Button></Button> */}
         </div>
 
+        <div className='nav-bar'>
+
         <Menu theme="dark">
           <Menu.Item icon ={<HomeOutlined/>}>
               <Link to ="/homepage">Home</Link>
@@ -30,6 +32,7 @@ const Navbar = () => {
               <Link to ="/news">News</Link>
            </Menu.Item>  
         </Menu>
+        </div>
       
     </div>
   )
