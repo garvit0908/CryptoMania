@@ -11,7 +11,7 @@ import '../App.css'
 
 const Cryptocurrencies = ({ simplified }) => {
 
-  const count = simplified ? 10 : 100;
+  const count = simplified ? 8: 20;
 
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
@@ -29,11 +29,10 @@ const Cryptocurrencies = ({ simplified }) => {
   useEffect(()=>{
     const filterData=cryptosList?.data?.coins.filter((coin)=>coin.name.toLowerCase().includes(searchterm.toLowerCase()));
     setCryptos(filterData);
-
   },[searchterm])
-  console.log(cryptos)
+  // console.log(cryptos)
   if (isFetching) return 'loading...'
-  console.log(cryptos)
+  // console.log(cryptos)
   return (
     <>
       {!simplified &&(
@@ -48,7 +47,10 @@ const Cryptocurrencies = ({ simplified }) => {
         <Row gutter={[28, 28]} className="crypto-card-container">
           {cryptos.map((currency) => (
             <Col xs={20} sm={12} lg={6} className="crypto-card" key={currency.id}>
-              <Link to={`/crypto/${currency.id}`}>
+              {console.log(currency.id)}
+              {/* i dont know ye cryptodetails ka url ksee bnaa */}
+              {/* ab know ho gya bas coinID n chlra hai */}
+              <Link to={`/crypto/:${currency.id}`}>
                 <Card
                   title={`${currency.rank}. ${currency.name}`}
                   extra={<img className="crypto-image" sizes='10px' src={currency.iconUrl} alt={currency.name} />}

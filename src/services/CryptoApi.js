@@ -33,11 +33,14 @@ export const cryptoApi =createApi({
     endpoints:(builder)=>({
         getCryptos :builder.query({
             query:(count)=> createRequest(`/coins?limit=${count}`)
-        })
+        }),
+        getCryptoDetails:builder.query({
+            query:(coinID)=> createRequest(`/coin/${coinID}`)
+        }),
     })
 });
 
 //hook to change getCryptos
 export const {
-    useGetCryptosQuery,
+    useGetCryptosQuery,useGetCryptoDetailsQuery
 }=cryptoApi;
