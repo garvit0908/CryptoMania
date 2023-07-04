@@ -46,11 +46,14 @@ const Cryptocurrencies = ({ simplified }) => {
       <div className="crypto-container">
         <Row gutter={[28, 28]} className="crypto-card-container">
           {cryptos.map((currency) => (
-            <Col xs={20} sm={12} lg={6} className="crypto-card" key={currency.id}>
-              {console.log(currency.id)}
+            <Col xs={20} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
+
+              {console.log(currency.uuid)}
+              {/* {console.log(currency)} */}
+              {/* {console.log("heelo")} */}
               {/* i dont know ye cryptodetails ka url ksee bnaa */}
               {/* ab know ho gya bas coinID n chlra hai */}
-              <Link to={`/crypto/:${currency.id}`}>
+              <Link to={`/crypto/${currency.uuid}`}>
                 <Card
                   title={`${currency.rank}. ${currency.name}`}
                   extra={<img className="crypto-image" sizes='10px' src={currency.iconUrl} alt={currency.name} />}
