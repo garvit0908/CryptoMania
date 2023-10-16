@@ -37,7 +37,7 @@ const News = ({ simplified }) => {
             <a href={ne.url} target=" blank" rel="noreferrer">
               <div className='news-image-container'>
                 <Title className='news-title' level={4}>{ne.name}</Title>
-                <img src={ne?.image?.thumbnail?.contentUrl ||demo} />
+                <img style={{ maxHeight :'100px', maxWidth : '100px'  }}  src={ne?.image?.thumbnail?.contentUrl ||demo} />
               </div>
               <p>
               {ne.description.length > 100 ? `${ne.description.substring(0, 100)}...` : ne.description}

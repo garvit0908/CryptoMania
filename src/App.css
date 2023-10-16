@@ -1,81 +1,84 @@
-:root{
-    --text-primary:#000;
-    --bgPrimary:#fff;
-   --bgSecondary: #F9F9F9;
-   --pink: #0071bd;
-   --light-blue: #e6f7ff;
-   --border: #d9d9d9;
-}
 
-* {
+  
+/*   
+  User
+  give me along with modifcation
+  ChatGPT
+  Apologies for the confusion earlier. Below is the complete CSS code with the modifications for the "noob" or amateurish look included:
+  
+  css
+  Copy code
+  /* Original CSS */
+  :root {
+    --text-primary: #000;
+    --bgPrimary: #fff;
+    --bgSecondary: #F9F9F9;
+    --pink: #0071bd;
+    --light-blue: #e6f7ff;
+    --border: #d9d9d9;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-a:hover{
+    
+  }
+  
+  a:hover {
     color: var(--pink) !important;
-}
-
-.app{
+  }
+  
+  .app {
     display: flex;
     overflow: hidden;
-}
-
-.navbar{
+  }
+  
+  .navbar {
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
-}
-
-.main{
+    background-color:grey;
+  }
+  
+  .main {
     flex: 0.8;
     width: 100%;
-    
-}
-.routes{
+  }
+  
+  .routes {
     padding: 20px;
-}
-.nav-container{
+  }
+  
+  .nav-container {
     position: fixed;
     left: 0;
     margin: 10px;
     height: 100vh;
     margin: 0px;
     background-color: rgb(0, 21, 41);
-}
-
-/* .nav-bar
-{
-    height: 100px;
-    /* position: fixed; */
-    /* left: 0; */
-    /* margin: 10px; */
-    /* height: 100vh; */
-    /* margin: 0px; */
-    /* background-color: rgb(0, 21, 41); 
-
-}  */
-.nav-bar
-{
+  }
+  
+  .nav-bar {
     display: flex;
     justify-content: flex-start;
-}
-
-.logo-container{
+  }
+  
+  .logo-container {
     background-color: #001529;
     display: flex;
     padding: 10px;
     align-items: center;
     width: 100%;
-    /* height: ; */
-}
-.logo{
-    margin:0 0 0 15px;
-}
-.logo a{
-   color: white;
-}
-.menu-control-container{
+  }
+  
+  .logo {
+    margin: 0 0 0 15px;
+  }
+  
+  .logo a {
+    color: white;
+  }
+  
+  .menu-control-container {
     display: none !important;
     position: absolute !important;
     right: 10px !important;
@@ -83,79 +86,81 @@ a:hover{
     font-size: 1.2rem !important;
     background-color: var(--bgSecondary) !important;
     border: none !important;
-}
-
-.loader{
+  }
+  
+  .loader {
     height: 81vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-@media screen and (max-width:1300px){
-    .main{
-        margin-left: 50px;
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .main {
+      margin-left: 50px;
     }
-}
-
-@media screen and (max-width:1170px){
-    .main{
-        margin-left: 50px;
+  }
+  
+  @media screen and (max-width: 1170px) {
+    .main {
+      margin-left: 50px;
     }
-}
-
-@media screen and (max-width:1000px){
-    .main{
-        margin-left: 100px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .main {
+      margin-left: 100px;
     }
-}
-
-@media screen and (max-width:800px){
-    .app{
-        flex-direction: column;
-        overflow: hidden;
-    }
-
-    .navbar{
-        flex: 1;
-    }
-
-    .main{
-        flex: 1;
-        margin-top: 90px;
-        margin-left: 0px;
-        margin-right: 10px;
-    }
-
-    .nav-container{
-        height: 8vh;
-        position:fixed;
-        width: 100%;
-        z-index: 100;
-        background-color: var(--bgSecondary);
+  }
+  
+  @media screen and (max-width: 800px) {
+    .app {
+      flex-direction: column;
+      overflow: hidden;
     }
   
-    .menu-control-container{
-        display: block !important;
+    .navbar {
+      flex: 1;
     }
-
-    .ant-menu{
-        position: absolute;
-        right: 0px;
+  
+    .main {
+      flex: 1;
+      margin-top: 90px;
+      margin-left: 0px;
+      margin-right: 10px;
     }
-    .home-title{
-        font-size: 1.4rem !important;
+  
+    .nav-container {
+      height: 8vh;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      background-color: var(--bgSecondary);
     }
-    .show-more{
-        font-size: 1.3rem !important;
+  
+    .menu-control-container {
+      display: block !important;
     }
-}
-
-.coin-detail-container{
+  
+    .ant-menu {
+      position: absolute;
+      right: 0px;
+    }
+  
+    .home-title {
+      font-size: 1.4rem !important;
+    }
+  
+    .show-more {
+      font-size: 1.3rem !important;
+    }
+  }
+  
+  .coin-detail-container {
     margin: 30px;
-}
-
-.coin-heading-container{
+  }
+  
+  .coin-heading-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,179 +168,193 @@ a:hover{
     border-bottom: 1px solid var(--border);
     padding-top: 20px;
     padding-bottom: 20px;
-    gap: 10px;
-}
-
-.coin-heading-container .coin-name{
+    gap: 10px;  
+  }
+  
+  .coin-heading-container .coin-name {
     font-weight: 900;
     color: var(--pink);
-}
-
-.coin-heading-container p{
+  }
+  
+  .coin-heading-container p {
     font-size: 1rem;
     opacity: 0.9;
     margin-bottom: 20px;
-}
-
-.stats-container{
+  }
+  
+  .stats-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-}
-
-.stats-container h2{
+    /* color: white; */
+  }
+  
+  .stats-container h2 {
     font-weight: 700;
     font-size: 1.4rem;
     margin-top: 20px;
     color: var(--pink);
-}
-
-.coin-details-heading{
+  }
+  
+  .coin-details-heading {
     font-weight: 700 !important;
     margin-top: 20px !important;
     color: var(--pink) !important;
-}
-
-.coin-stats{
+  }
+  
+  .coin-stats {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--border);
     font-size: 1rem;
     opacity: 0.9;
     padding: 20px;
-
-}
-
-.coin-stats-name{
+  }
+  
+  .coin-stats-name {
     display: flex;
     gap: 10px;
     font-size: 1rem;
-}
-
-.stats{
+  }
+  
+  .stats {
     font-weight: 800;
-}
-
-.coin-value-statistics-heading p{
+  }
+  
+  .coin-value-statistics-heading p {
     font-size: 1rem;
     opacity: 0.9;
-}
-
-.coin-desc-link{
+  }
+  
+  .coin-desc-link {
     display: flex;
     gap: 40px;
     margin-top: 40px;
     padding-top: 20px;
-}
-
-.coin-desc-link h2{
+  }
+  
+  .coin-desc-link h2 {
     font-weight: 700;
     color: var(--pink);
-}
-
-.coin-desc-link p{
+  }
+  
+  .coin-desc-link p {
     font-size: 1rem;
     opacity: 0.9;
-}
-
-.coin-desc-link a{
+  }
+  
+  .coin-desc-link a {
     color: var(--pink);
-}
-
-.coin-desc-link h3{
+  }
+  
+  .coin-desc-link h3 {
     font-weight: 700;
-}
-
-.coin-desc{
+  }
+  
+  .coin-desc {
     flex: 0.5;
-}
-
-.coin-links{
-  padding: 0px 20px;
+  }
+  
+  .coin-links {
+    padding: 0px 20px;
     flex: 0.5;
-}
-
-.coin-link{
+  }
+  
+  .coin-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
     padding: 20px;
-}
-
-.link-name{
+  }
+  
+  .link-name {
     text-transform: capitalize;
     font-size: 1rem;
-}
-
-.coin-link a{
+  }
+  
+  .coin-link a {
     color: var(--pink);
     font-weight: 700;
     font-size: 1rem;
-}
-
-.coin-link:hover, .coin-stats:hover{
+  }
+  
+  .coin-link:hover,
+  .coin-stats:hover {
     background-color: var(--bgSecondary);
-}
-
-@media screen and (max-width:1000px){
-    .stats-container{
-        flex-direction: column;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .stats-container {
+      flex-direction: column;
     }
-    .coin-desc-link{
-        flex-direction: column;
+    .coin-desc-link {
+      flex-direction: column;
     }
-    .stats-container h2{
-        margin-top: 0px;
+    .stats-container h2 {
+      margin-top: 0px;
     }
-}
-
-@media screen and (max-width: 500px){
-    .coin-links{
-        padding: 0px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .coin-links {
+      padding: 0px;
     }
-    .coin-detail-container{
-        margin: 0;
+    .coin-detail-container {
+      margin: 0;
     }
-}
-@media screen and (max-width: 500px){
-    .heading{
-        margin-top: 20px;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .heading {
+      margin-top: 20px;
     }
-}
-
-.select-news{
+  }
+  
+  .select-news {
     width: 180px;
-}
-.news-card{
+  }
+  
+  .news-card {
     min-height: 300px !important;
-}
-.news-image-container{
+  }
+  
+  .news-image-container {
     display: flex !important;
     justify-content: space-between !important;
-}
-.news-title{
-width: 70%;
-}
-
-.news-image-container .img{
-    width:100px;
-    height:100px;
-}
-.news-card p{
+  }
+  
+  .news-title {
+    width: 70%;
+  }
+  
+  .news-image-container .img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .news-card p {
     color: black;
     margin: 10px 0px !important;
-}
-.provider-container{
+  }
+  
+  .provider-container {
     display: flex;
     justify-content: space-between;
-}
-.provider-name{
+  }
+  
+  .provider-name {
     margin-left: 10px;
-}
-
-.chart-header{
+  }
+  
+  .chart-header 
+   
+  
+  
+  
+  
+    {
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -394,4 +413,4 @@ width: 70%;
     padding:1px;
     height: 50px;
     align-items: center;
-}
+} 

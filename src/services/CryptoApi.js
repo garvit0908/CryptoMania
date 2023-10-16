@@ -37,10 +37,13 @@ export const cryptoApi =createApi({
         getCryptoDetails:builder.query({
             query:(coinID)=> createRequest(`/coin/${coinID}`)
         }),
+        getCryptoHistory:builder.query({
+            query:(coinID,timePeriod)=> createRequest(`/coin/${coinID}/history/${timePeriod}`)
+        }),
     })
 });
 
 //hook to change getCryptos
 export const {
-    useGetCryptosQuery,useGetCryptoDetailsQuery
+    useGetCryptosQuery,useGetCryptoDetailsQuery,useGetCryptoHistoryQuery
 }=cryptoApi;

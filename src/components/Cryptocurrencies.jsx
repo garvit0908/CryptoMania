@@ -7,8 +7,6 @@ import { useGetCryptosQuery } from '../services/CryptoApi'
 // import '/Cryptocurrencies.css'
 import '../App.css'
 
-
-
 const Cryptocurrencies = ({ simplified }) => {
 
   const count = simplified ? 8: 20;
@@ -44,9 +42,9 @@ const Cryptocurrencies = ({ simplified }) => {
 
 
       <div className="crypto-container">
-        <Row gutter={[28, 28]} className="crypto-card-container">
+        <Row gutter={[22, 22]} className="crypto-card-container">
           {cryptos.map((currency) => (
-            <Col xs={20} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
+            <Col xs={15} sm={12} lg={6} className="crypto-card" key={currency.uuid}>
 
               {console.log(currency.uuid)}
               {/* {console.log(currency)} */}
