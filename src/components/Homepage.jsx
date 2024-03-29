@@ -13,7 +13,7 @@ const {Title}=Typography
 const Homepage = () => {
   
   const{data,isFetching}=useGetCryptosQuery(10);
- 
+  {console.log(data)}
   const globalStats=data?.data?.stats
   // console.log(data)
   if(isFetching) return 'loading...'
@@ -33,6 +33,7 @@ const Homepage = () => {
         <Title level={2} className='home-title'>Top 10 Cryptocurrencies in the world</Title>
         <Title level={3} className='show more' ><Link to ="/cryptocurrencies">Show More</Link></Title>
       </div>
+      {/* ye call to kia hua h na component ko.. */}
       <Cryptocurrencies simplified />
 
       <div className='home-heading-container'>
