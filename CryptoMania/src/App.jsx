@@ -8,13 +8,10 @@ import Navbar from './Components/Navbar'
 import NavExample from './Components/NavExample'
 import { BrowserRouter,Route,Routes} from 'react-router-dom'
 import CryptoNews from './Components/CryptoNews'
-
-
+import useAllCoinInfo from './Hooks/useAllCoinInfi'
 //There will be hell lot of components and u have to plan that
-
-
 function App() {
-
+  const {data,loading,error}=useAllCoinInfo()
   return (
     <>
     <div>
