@@ -14,8 +14,10 @@ function Home() {
   // console.log(data?.stats)
 
   return (
-    <div>
-      <LiveEditor data={data}/>
+    <div className='flex flex-row'>
+    <div><LiveEditor data={data}/></div>
+    <div><LiveEditor data={data}/></div>
+    <div><LiveEditor data={data}/></div>
     </div>
   )
 }
