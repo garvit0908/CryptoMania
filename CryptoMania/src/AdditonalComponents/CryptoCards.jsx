@@ -1,21 +1,28 @@
+import React from 'react'
+import millify from 'millify'
 
-"use client";
-
-import { Card } from "flowbite-react";
-
-function Component() {
+function CryptoCards({coin}) {
   return (
-    <Card
-      className="max-w-sm"
-      imgAlt="Meaningful alt text for an image that is not purely decorative"
-      imgSrc="/images/blog/image-1.jpg"
-    >
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
-      </h5>
-      <p className="font-normal text-gray-700 dark:text-gray-400">
-        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+    <div class="max-w-xs rounded overflow-hidden shadow-lg bg-white relative">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{coin?.name}</div>
+      <div class="absolute top-0 right-0 m-2">
+        <img class="w-8 h-8" src={coin?.iconUrl} alt="Sunset in the mountains"/>
+      </div>
+      <p class="text-gray-700 text-base">
+      Price: {millify(coin?.price)}
       </p>
-    </Card>
-  );
+      <p class="text-gray-700 text-base">
+      Market Cap: {millify(coin?.marketCap)}
+      </p>
+      <p class="text-gray-700 text-base">
+      Daily Change: {coin?.change}%
+      </p>
+    </div>
+    {/* <div class="hover:bg-gray-100 absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300"></div> */}
+  </div>
+  
+  )
 }
+
+export default CryptoCards

@@ -1,33 +1,36 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-//lets think of the logic of navbar
-//Home CryptoCurrencies CryptoNews Exhanges
-
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-4 m-0">
+    <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
+        {/* Logo on the left */}
         <div className="text-white font-bold text-xl">Logo</div>
-        <div className="flex space-x-4">
-          <NavItem href="/">Home</NavItem>
-          <NavItem href="/cryptocurrencies">Cryptocurrencies</NavItem>
-          <NavItem href="/cryptonews">Crypto News</NavItem>
-          <NavItem href="/exchanges">Exchanges</NavItem>
-        </div>
+
+        {/* Navigation links on the right */}
+        <ul className="flex space-x-4">
+          <NavItem to="/">Home</NavItem>
+          <NavItem to="/cryptocurrencies">Cryptocurrencies</NavItem>
+          <NavItem to="/cryptonews">Crypto News</NavItem>
+          <NavItem to="/exchanges">Exchanges</NavItem>
+        </ul>
       </div>
     </nav>
-  )
-}
-
-const NavItem = ({ href, children }) => {
-  return (
-    <a
-      href={href}
-      className="text-white hover:text-gray-300 transition duration-300 ease-in-out"
-    >
-      {children}
-    </a>
   );
 };
 
-export default Navbar
+const NavItem = ({ to, children }) => {
+  return (
+    <li>
+      <Link
+        to={to}
+        className="text-white hover:text-gray-300 transition duration-300 ease-in-out"
+      >
+        {children}
+      </Link>
+    </li>
+  );
+};
+
+export default Navbar;
