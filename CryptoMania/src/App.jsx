@@ -12,7 +12,7 @@ import useAllCoinInfo from './Hooks/useAllCoinInfi'
 import CryptoDetails from './Components/CryptoDetails'
 //There will be hell lot of components and u have to plan that
 function App() {
-  const {data,loading,error}=useAllCoinInfo()
+  // const {data,loading,error}=useAllCoinInfo()
   return (
     <>
     <div>

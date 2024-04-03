@@ -7,7 +7,7 @@ import LiveEditor from '../AdditonalComponents/LiveEditor';
 
 function Home() {
   const[stats,setStats]=useState([])
-  const data=useAllCoinInfo()
+  // const data=useAllCoinInfo()
   // console.log(data)
   // console.log(data.stats)
   // setStats(data?.stats)
@@ -15,9 +15,9 @@ function Home() {
 
   return (
     <div className='flex flex-row'>
+    {/* <div><LiveEditor data={data}/></div>
     <div><LiveEditor data={data}/></div>
-    <div><LiveEditor data={data}/></div>
-    <div><LiveEditor data={data}/></div>
+    <div><LiveEditor data={data}/></div> */}
     </div>
   )
 }
