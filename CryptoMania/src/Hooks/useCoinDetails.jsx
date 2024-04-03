@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+//ye ek particular coin ki details add kregaaaaa.........
 
 const useCoinDetails = () => {
     const [data, setData] = useState([]);

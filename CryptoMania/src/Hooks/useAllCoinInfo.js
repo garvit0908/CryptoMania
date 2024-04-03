@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 
-const useAllCoinInfo = (coinId) => {
+const useAllCoinInfo = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        const url = `https://coinranking1.p.rapidapi.com/coin/${coinId}?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h`;
-
+        const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
         const options = {
             method: 'GET',
             headers: {
@@ -17,7 +16,7 @@ const useAllCoinInfo = (coinId) => {
         .then(result => setData(result.data))
         .catch(error => console.error(error))
     }, [])
-    // console.log(data);
+    console.log(data);
     return data;
 }
 

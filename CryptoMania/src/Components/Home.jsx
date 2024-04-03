@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
-import useAllCoinInfo from '../Hooks/useAllCoinInfi'
+import useAllCoinInfo from '../Hooks/useAllCoinInfo'
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 import LiveEditor from '../AdditonalComponents/LiveEditor';
 
 function Home() {
   const[stats,setStats]=useState([])
-  // const data=useAllCoinInfo()
+  const data=useAllCoinInfo()
   // console.log(data)
   // console.log(data.stats)
   // setStats(data?.stats)
@@ -15,9 +15,9 @@ function Home() {
 
   return (
     <div className='flex flex-row'>
-    {/* <div><LiveEditor data={data}/></div>
     <div><LiveEditor data={data}/></div>
-    <div><LiveEditor data={data}/></div> */}
+    <div><LiveEditor data={data}/></div>
+    <div><LiveEditor data={data}/></div>
     </div>
   )
 }
